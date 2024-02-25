@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive website</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/80bdff805d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <h2>Logo</h2>
+            <div class="nav-part2">
+                <h4>store</h4>
+                <h4>courses</h4>
+                <h4>career</h4>
+                <h4>Blog</h4>
+                <h4>Account</h4>
+                <button>sign in</button>
+                <i class="ri-bar-chart-horizontal-fill"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1>prince kumar <span>prince</span> kumar</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe eos ad repellendus quisquam nam vero corrupti assumenda, sapiente molestiae.</p>
+                <button>explore now</button>
+            </div>
+            <div class="right">
+                <img src="image/woman-8439003.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="color-switcher">
+        <div class="switcher-btn">
+            <i class="fas fa-cog"></i>
+        </div>
+        <h3>select color</h3>
+        <div class="theme-buttons-container">
+            <span class="theme-buttons" data-color="#8e44ad" style="background: #8e44ad;"></span>
+            <span class="theme-buttons" data-color="#14b763" style="background: #14b763;"></span>
+            <span class="theme-buttons" data-color="#2260fe" style="background: #2260fe;"></span>
+        </div>
+    </div>
+
+    
+    <script>
+        document.querySelector('.switcher-btn').onclick = () =>{
+            document.querySelector('.color-switcher').classList.toggle('active');
+        };
+
+        let themeButtons = document.querySelectorAll('.theme-buttons');
+
+        themeButtons.forEach(color =>{
+            let datacolor = color.getAttribute('data-color');
+            document.querySelector(':root').style.setproperty('main',datacolor);
+        });
+
+    </script>
+    <script src="script.js"> </script>
+</body>
+</html>
+<!-- unferstanding units
+    --px    --px is the fixe size like a:30px,70px etc;
+    --%     --% is depend your perrants like behave as like a:yuvi 100=50% 50rs, prem 500=20% 100rs;
+--vw, vh    --vw depend scren width size , vh depend scren hight size;
+--vmax,vmin --vmax,vmin is depend scren size but as a fize time(size) limet;vh=viewport width
+--em, rem   --em depend your parent like 40px=1em, 70px==1em : rem as depent scren size 1rem==60px; 
+ 
+----Layout  of website
+--absolute vs flex?
+----Flexbox
+--Display flex
+--alingning items in x and y axis
+--flex direction
+--flex wrap
+
+----Css Media Queries  it is a girgit ak time ke bad coluer change kar sakte hai
+--min height, min width
+--min width, max width
+
+Key points to keep in mind to make website responsive
+1.css Flexbox
+2.css units
+3.responsive typography
+4.mobile-fiest approach
+5.flexible images and media
+
+ -->

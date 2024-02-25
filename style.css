@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Gilroy';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.nav{
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid #dadada;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+.nav-part2{
+    display: flex;
+    /* background: rgb(237, 0, 0); */
+    gap: 4vw;
+}
+.nav h2{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.nav h4{
+    font-size: 1.1vw;
+}
+.nav button{
+    font-size: 1vw;
+    padding: 0.6vw 1.4vw;
+    background-color: rgb(250, 233, 217);
+    color:rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.nav i{
+    /* font-size: 1.6vw; */
+    flex-wrap: 800;
+    display: none;
+}
+.content{
+    height: calc(100% - 100px);
+    width: 100%;
+    /* background-color: rgb(250, 209, 147); */
+    display: flex;
+    position: relative;
+}
+.left{
+    height: 100%;
+    width: 55%;
+    /* background-color:rgb(137, 200, 255); */
+    padding: 5vw 5vw;
+}
+.left h1{
+    font-size: 4.2vw;
+    line-height: 4vw;
+}
+.left h1 span{
+    color: rgb(245, 222, 198);
+}
+.content button{
+    font-size: 1.2vw;
+    padding: 1.1vw 2.1vw;
+    background-color: rgb(250, 233, 217);
+    color:rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.left p{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #555;
+    width: 80%;
+    margin-top: 1.5vw;
+    margin-bottom: 3vw;
+}
+.right{
+    height: 100%;
+    width: 45%;
+    /* background-color:rgb(253, 101, 101); */
+}
+.right img{
+    height: 100%;
+    width:  100%;
+    /* background-color:rgb(253, 101, 101); */
+}
+
+
+
+@media(max-width:600px){
+    .nav{
+        /* background-color:rgb(0, 255, 170);
+        color: white; */
+        padding: 0 6vw;
+        height: 60px;
+    }
+    .nav h2{
+        font-size: 6vw;
+    }
+    .nav h4{
+        font-size: 5.1vw;
+        display: none;
+    }
+    .nav button{
+        display: none;
+    }
+    .nav i{
+        display: block;
+        font-size: 4.5vw;
+    }
+    .content{
+        height: calc(100%-60px);
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        height: 45%;
+        padding: 4vw 6vw;
+    }
+    .right{
+        width: 100%;
+        height: 55%;
+    }
+    .left h1{
+        font-size: 10vw;
+        line-height: 12vw;
+    }
+    .left p{
+        font-size: 3vw;
+        /* line-height: 4vw; */
+        width: 90%;
+        margin-top: 5vw;
+        margin-bottom: 6vw;
+    }
+    .content button{
+        padding: 3vw 9vw;
+        font-size: 11px;
+        border-radius: 3.5px;
+        font-weight: 800;
+    }
+
+}
+
+:root{
+    --main-color:#8e44ab:
+}
+.color-switcher{
+    position: fixed;
+    top: 25px;
+    right: -200px;
+    width: 200px;
+    padding: 10px;
+    background-color: #dadada;
+    z-index: 1000;
+}
+.color-switcher .active{
+    right: 0px;
+}
+.color-switcher h3{
+    color: var(main);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #5555;
+    padding: 5px 0;
+    text-align: center;
+}
+.color-switcher .switcher-btn{
+    position: absolute;
+    top: 0;
+    left: -75px;
+    color: var(main);
+    background: #fff;
+    padding: 10px 20x;
+    cursor: pointer;
+    font-size: 35px;
+}
+.color-switcher .switcher-btn{
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.color-switcher .theme-buttons-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.color-switcher .theme-buttons-container .theme-buttons{
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
